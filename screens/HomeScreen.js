@@ -45,13 +45,14 @@ export default class HomeScreen extends Component {
             <LottieView source={require('../assets/animations/slime-face-white.json')} autoPlay loop />
             </View>
             <View style={styles.buttonContainer}>
-                <TouchableOpacity style={tailwind('bg-transparent w-full  py-3 items-center rounded-lg my-1 border-4 border-black border-solid')}>
+              {/*  <TouchableOpacity style={tailwind('bg-transparent w-full  py-3 items-center rounded-lg my-1 border-4 border-black border-solid')}>
                 <Text style={tailwind('text-black text-lg font-medium')}>Login</Text>
                 </TouchableOpacity>
+        */}
                 <TouchableOpacity 
                 onPress={() => navigation.navigate("Play")}
                 style={tailwind('bg-black w-full py-4 items-center rounded-lg my-1 ')}>
-                <Text  style={tailwind('text-white text-lg font-medium')}>Play as Guest</Text>
+                <Text  style={tailwind('text-white text-lg font-medium')}>Play Now</Text>
                 </TouchableOpacity>
                 <TouchableOpacity 
                 // onPress={() => navigation.navigate("Play")}

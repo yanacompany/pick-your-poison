@@ -12,6 +12,7 @@ export default class MainApp extends Component {
     render() {
         return (
             <Stack.Navigator
+            initialRouteName="Auth"
             mode="modal"
             headerMode="none"
             screenOptions={{ cardStyle: { backgroundColor: 'transparent' } }}
@@ -19,12 +20,6 @@ export default class MainApp extends Component {
             <Stack.Screen 
             name="Home" component={HomeScreen} />
             <Stack.Screen 
-            options={{
-                cardStyle: {
-                    backgroundColor: 'transparent'
-                    
-                }
-            }}
             name="Auth" 
             component={AuthScreen} />
             <Stack.Screen name="Play" component={PlayScreen} />
