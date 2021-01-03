@@ -1,13 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView} from 'react-native';
+import tailwind from 'tailwind-rn';
+import { NavigationContainer } from '@react-navigation/native';
+import MainApp from './MainApp/MainApp';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <NavigationContainer>
+    <SafeAreaView style={tailwind('h-full bg-black pt-12 pb-6')}>
+    <StatusBar style="light" />
+    <View style={tailwind('h-full bg-white  mx-2 p-1 rounded-lg')}>
+    <MainApp />
     </View>
+  
+  </SafeAreaView>
+  </NavigationContainer>
   );
 }
 
