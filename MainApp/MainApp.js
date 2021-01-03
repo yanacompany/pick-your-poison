@@ -15,14 +15,21 @@ export default class MainApp extends Component {
             initialRouteName="Auth"
             mode="modal"
             headerMode="none"
-            screenOptions={{ cardStyle: { backgroundColor: 'transparent' } }}
+            screenOptions={{ 
+                cardStyle: { 
+                    backgroundColor: 'transparent'
+                }
+            }}
             >
             <Stack.Screen 
-            name="Home" component={HomeScreen} />
+            name="Home" 
+            component={HomeScreen} />
             <Stack.Screen 
             name="Auth" 
             component={AuthScreen} />
-            <Stack.Screen name="Play" component={PlayScreen} />
+            <Stack.Screen 
+            name="Play" 
+            component={PlayScreen} />
           </Stack.Navigator>
         )
     }

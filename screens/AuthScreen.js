@@ -4,6 +4,7 @@ import tailwind from 'tailwind-rn';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import moment from 'moment'
 import Emoji from 'react-native-emoji';
+import BouncyView from 'react-native-bouncy-touchable'
 
 const styles = StyleSheet.create({
     inputContainer:{
@@ -102,6 +103,7 @@ export default class AuthScreen extends Component {
 
     render() {
         let {name, dob, mode, show} = this.state
+        const {navigation} = this.props
         // console.log(moment(dob).format("MMMM Do YYYY"))
         console.log(moment(dob).calendar())
         let date = moment(dob).calendar()
@@ -130,7 +132,7 @@ export default class AuthScreen extends Component {
             placeholderTextColor={'rgba(0,0,0,.25)'}
             placeholder={"Your name please"}
             keyboardType="ascii-capable"
-            clearButtonMode={true}
+            clearButtonMode={'always'}
             style={styles.formInput}
             onChangeText={(text) => this.handleChange("name",text)}
             value={name}
@@ -159,11 +161,17 @@ export default class AuthScreen extends Component {
             }
          
         </View> 
-        <TouchableOpacity
-        style={tailwind('w-full py-5 my-3 items-center bg-black rounded-lg')}
-        >
+        <BouncyView 
+        delay={30} // Animation delay in miliseconds
+        scale={1.05} // Max scale of animation
+        style={tailwind('w-full py-5 mt-20 items-center bg-black rounded-lg')}
+        onPress={() => navigation.navigate("Home")}
+    >
+       {/* <TouchableOpacity
+        style={tailwind('w-full py-5 mt-20 items-center bg-black rounded-lg')}
+       > */}
         <Text  style={tailwind('text-white font-bold text-lg')}>Let's Play</Text>
-        </TouchableOpacity> 
+        </BouncyView> 
           </ScrollView>
         )
     }
