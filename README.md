@@ -1,52 +1,79 @@
-# undefined
 
+# Pick you poison (Would you rather) game
+
+![](https://i.imgur.com/dEV8OJd.png)
 ## Table of Contents
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Usage](#usage)
-- [Contributing](../CONTRIBUTING.md)
+- [Improvements](#improvements)
 
 ## About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+Would you rather (Picking between two options) game built with React Native (Expo managed)
 
 ## Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+- Clone the repo
+```bash
+git clone git@github.com:yanacompany/pick-your-poison.git
+```
+
+- Move into the cloned repo directory
+```
+cd pick-your-poison
+```
+
+- Install the packages
+```
+npm install
+```
+
+- Run with the Expo CLI
+```
+expo start
+```
+
+- Run the app on your local machine (Metro Server)
+1. Run on Expo Client App (Found in android/ios playstore)
+```
+Scan the QR code above with the Expo app or the camera app on ios
+```
+2. On Mac for Iphone Simulator (Easier if you have Xcode installed)
+- Press the following command
+```
+i
+```
+
+3. On Mac for Android Emulator (Need to have Android Studio installed)
+ - Open up android simulator and create/run an avd ("emulated android device")
+ ```
+a
+ ```
+4. On Windows 
+No instruction yet but should be somewhat the same
+- It is NOT possible to run iphone apps on windows
+
+5.  To Refresh the app/Restart the app you must
+shake the device for the developer menu to pop up. Press "Reload app"
 
 ### Prerequisites
 
-What things you need to install the software and how to install them.
+- Expo CLI found at [Expo-cli](https://docs.expo.io/workflow/expo-cli/) 
 
 ```
-Give examples
+npm install -g expo-cli
 ```
 
-### Installing
+- [Android Studio](https://developer.android.com/studio/) and/or [Xcode](https://developer.apple.com/xcode/) to run on emulators
 
-A step by step series of examples that tell you how to get a development env running.
+- Expo Client app
 
-Say what the step will be
 
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
-## Usage <a name = "usage"></a>
-
-Add notes about how to use the system.
+## Improvements <a name = "improvements"></a>
 
 ### Reduce the app size
-using expo component
+Using expo component
 after you done and want publish with less size or just wan't to use a native library expo give you an option called ExpoKit this also can be used with already build with native code react projects
 
 1. run command expo eject to add ExpoKit (choose the "ExpoKit" option)
@@ -54,3 +81,6 @@ after you done and want publish with less size or just wan't to use a native lib
 2. start expo packager with expo start.Leave this running and continue with the following steps.
 3. link library for android and ios, this command mostly do this react-native link, sometime this will not work and you should do it manually for this means visit expokit
 PS: Works!! (according to stackoverflow (32mb to 9mb))
+
+Source: [Stack Overflow : How to reduce the size of an expo/react-native app on Android
+](https://stackoverflow.com/questions/49993006/how-to-reduce-the-size-of-an-expo-react-native-app-on-android)
