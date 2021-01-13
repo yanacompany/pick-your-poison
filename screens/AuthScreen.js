@@ -104,8 +104,7 @@ export default class AuthScreen extends Component {
     render() {
         let {name, dob, mode, show} = this.state
         const {navigation} = this.props
-        // console.log(moment(dob).format("MMMM Do YYYY"))
-        console.log(moment(dob).calendar())
+        console.info(moment(dob).calendar())
         let date = moment(dob).calendar()
         return (
             <ScrollView style={tailwind('p-2')}>
@@ -161,17 +160,18 @@ export default class AuthScreen extends Component {
             }
          
         </View> 
-        <BouncyView 
+      {/*  <BouncyView 
         delay={30} // Animation delay in miliseconds
         scale={1.05} // Max scale of animation
         style={tailwind('w-full py-5 mt-20 items-center bg-black rounded-lg')}
         onPress={() => navigation.navigate("Home")}
-    >
-       {/* <TouchableOpacity
+      > */}
+        <TouchableOpacity
+        onPress={() => navigation.navigate("Home")}
         style={tailwind('w-full py-5 mt-20 items-center bg-black rounded-lg')}
-       > */}
+       > 
         <Text  style={tailwind('text-white font-bold text-lg')}>Let's Play</Text>
-        </BouncyView> 
+        </TouchableOpacity> 
           </ScrollView>
         )
     }
